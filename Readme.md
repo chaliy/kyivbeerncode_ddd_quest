@@ -33,3 +33,11 @@ NoSql - MongoDb?
 
 # Tricks
 
+# Source Code
+
+1. Visual Studio 2011 (nothing special, I think this could be easy dowgraded to Visual Studio 2010)
+2. NUnit Tests (either notthing special, could be easy changed to something else)
+
+Note#1: We do not check-in dependencies from nuget to source control. This is OK. When you will build solution for first time, script will automatically dowload everything it needs.
+
+Note#2: To build solution run `msbuild` in solution folder. It will peak default solution file and build.
