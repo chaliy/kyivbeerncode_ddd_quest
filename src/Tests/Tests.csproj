@@ -59,6 +59,8 @@
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Domain\Meetings\When_register_alread_registerd_attendie.cs" />
+    <Compile Include="Domain\Meetings\When_register_attendie.cs" />
     <Compile Include="Domain\Meetings\When_register_new_meeting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestEnvironment.cs" />

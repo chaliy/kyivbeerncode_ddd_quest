@@ -2,7 +2,12 @@ namespace KyivBeerNCode.Domain.Meetings
 {
     public class Attendie : Entity
     {
-        public string FullName { get; set; }
+        public Attendie(string fullName)
+        {
+            FullName = fullName;
+        }
+
+        public string FullName { get; internal set; }
         public string EmailAddress { get; set; }
     }
 }
