@@ -9,22 +9,22 @@
 
 1. Событие может иметь ограничение на количество посетителей
 2. Посетитель может регистрироваться один раз
-
 3. Регистрация события - привелегированная операция
 
 # Domain Model
 
-Event - RA
-	Address - VO
-	Date
-	MaxNumberOfAttendies
-	Attendies
+	Event - RA
 
-# Persitance
+		Address - VO
+		Date
+		MaxNumberOfAttendies
+		Attendies
 
-Класическая, NHibernate
+# Implementation
 
-NoSql - MongoDb?
+	Tests - **NUnit**, MSpec, Cucumber
+	Persitence - **NHibernate**, Memory, MongoDb
+	UI - **Console**, ASP.NET MVC, REST Like API
 
 # UI
 

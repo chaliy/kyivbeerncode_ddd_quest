@@ -6,11 +6,11 @@ using KyivBeerNCode.Infrastructure.Persistence.NHibernate;
 
 namespace KyivBeerNCode
 {
-    public class ExecutionEnvironement
+    public class ExecutionEnvironment
     {
         readonly CompositionContainer _container;
 
-        public ExecutionEnvironement(Type uowType)
+        public ExecutionEnvironment(Type uowType)
         {            
             var catalog = new TypeCatalog(
                 // Infrastructure
@@ -32,9 +32,9 @@ namespace KyivBeerNCode
             return export.Value;
         }
 
-        public static ExecutionEnvironement Default()
+        public static ExecutionEnvironment Default()
         {
-            return new ExecutionEnvironement(typeof(NHUnitOfWork));
+            return new ExecutionEnvironment(typeof(NHUnitOfWork));
         }
     }
 }

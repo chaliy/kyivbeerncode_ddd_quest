@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.Composition;
+﻿using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 
 namespace KyivBeerNCode.Infrastructure.Persistence.Memory
@@ -6,29 +7,36 @@ namespace KyivBeerNCode.Infrastructure.Persistence.Memory
     [Export(typeof(IUnitOfWork))]
     public class MemoryUnitOfWork : IUnitOfWork
     {
-        public T Get<T>(string key)
+        readonly IList<RootAggregate> _store = new List<RootAggregate>();
+
+        public T Get<T>(string id) where T : RootAggregate
         {
-            throw new System.NotImplementedException();
+            return _store.OfType<T>().First(x => x.ID == id);
         }
 
-        public IQueryable<T> Query<T>()
+        public IQueryable<T> Query<T>() where T : RootAggregate
         {
-            throw new System.NotImplementedException();
+            return _store.OfType<T>().AsQueryable();
         }
 
-        public void Delete<T>(string key)
+        public void Delete<T>(string id) where T : RootAggregate
         {
-            throw new System.NotImplementedException();
+            var toDelete = _store.OfType<T>().First(x => x.ID == id);
+
+            if (toDelete != null)
+            {
+                _store.Remove(toDelete);
+            }
         }
 
-        public void Add<T>(T entity)
+        public void Add<T>(T entity) where T : RootAggregate
         {
-            throw new System.NotImplementedException();
+            _store.Add(entity);
         }
 
         public void CommitChanges()
         {
-            throw new System.NotImplementedException();
+            // Do nothing for now
         }
     }
 }

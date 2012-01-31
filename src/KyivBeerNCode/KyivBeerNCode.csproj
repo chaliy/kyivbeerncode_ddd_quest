@@ -54,7 +54,7 @@
     <Compile Include="Domain\Events\EventRegistrator.cs" />
     <Compile Include="Domain\Events\EventRepository.cs" />
     <Compile Include="Entity.cs" />
-    <Compile Include="ExecutionEnvironement.cs" />
+    <Compile Include="ExecutionEnvironment.cs" />
     <Compile Include="Infrastructure\Persistence\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\Persistence\Memory\MemoryUnitOfWork.cs" />
     <Compile Include="Infrastructure\Persistence\NHibernate\NHUnitOfWork.cs" />

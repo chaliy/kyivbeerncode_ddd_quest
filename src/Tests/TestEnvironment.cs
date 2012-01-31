@@ -4,9 +4,9 @@ namespace KyivBeerNCode.Tests
 {
     public class TestEnvironment
     {        
-        public static ExecutionEnvironement Create()
+        public static ExecutionEnvironment Create()
         {
-            return new ExecutionEnvironement(typeof (MemoryUnitOfWork));
+            return new ExecutionEnvironment(typeof (MemoryUnitOfWork));
         }
     }    
 }

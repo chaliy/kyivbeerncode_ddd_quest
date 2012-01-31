@@ -7,7 +7,7 @@ namespace PlayGround
     {
         static void Main(string[] args)
         {
-            var env = ExecutionEnvironement.Default();
+            var env = ExecutionEnvironment.Default();
             var registrator = env.Resolve<EventRegistrator>();
 
             var @event = registrator.Register("Test");
