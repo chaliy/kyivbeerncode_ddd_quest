@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
-using System.Text;
 
 namespace KyivBeerNCode.Infrastructure.Persistence.NHibernate
 {
-    class NHUnitOfWork : IUnitOfWork
+    [Export(typeof(IUnitOfWork))]
+    public class NHUnitOfWork : IUnitOfWork
     {
         public T Get<T>(string key)
         {

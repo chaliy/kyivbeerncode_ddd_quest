@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,13 +45,22 @@
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Domain\Events\Address.cs" />
+    <Compile Include="Domain\Events\Attendie.cs" />
+    <Compile Include="Domain\Events\CreateNewEvent.cs" />
     <Compile Include="Domain\Events\CreateNewEventHandler.cs" />
-    <Compile Include="Domain\Events\DomainException.cs" />
+    <Compile Include="DomainException.cs" />
     <Compile Include="Domain\Events\Event.cs" />
+    <Compile Include="Domain\Events\EventRegistrator.cs" />
+    <Compile Include="Domain\Events\EventRepository.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="ExecutionEnvironement.cs" />
     <Compile Include="Infrastructure\Persistence\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\Persistence\Memory\MemoryUnitOfWork.cs" />
     <Compile Include="Infrastructure\Persistence\NHibernate\NHUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RootAggregate.cs" />
+    <Compile Include="ValueObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
