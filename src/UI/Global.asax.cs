@@ -20,10 +20,16 @@ namespace UI
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Meetings", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                "MeetingActions",
+                "Meetings/Actions/{id}/{action}",
+                new { controller = "Meetings", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                "Default",
+                "{controller}/{action}/{id}",
+                new { controller = "Meetings", action = "Index", id = UrlParameter.Optional } 
+            );            
 
         }
 

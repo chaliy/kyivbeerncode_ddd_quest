@@ -1,0 +1,31 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>Register</h2>
+
+<form action="/meetings/details/@Model.Meeting.ID/Register" method="POST">
+    <fieldset>
+        <legend>Enter registration information</legend>
+        <div class="clearfix">
+            <label for="fullName">Full Name</label>
+            <div class="input">
+                <input class="xlarge" id="fullName" name="fullName" size="30" type="text" />
+            </div>
+        </div>
+        <div class="clearfix">
+            <label for="email">E-mail</label>
+            <div class="input">
+                <input class="xlarge" id="email" name="email" size="30" type="email" />
+            </div>
+        </div>
+        <div class="actions">
+            <input type="submit" class="btn primary" value="Register">&nbsp;<button type="reset" class="btn">Cancel</button>
+        </div>
+    </fieldset>    
+</form>
+
+

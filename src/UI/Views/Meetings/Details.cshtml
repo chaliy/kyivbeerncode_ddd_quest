@@ -9,14 +9,15 @@
 
 <div class="container-fluid">
     <div class="sidebar">
-        <p>Eventually here you will see actions like register attendie.</p>
+        <a href="/meetings/actions/@Model.Meeting.ID/Register" class="btn">Register</a>
     </div>
     <div class="content">
+        <p>Already registered</p>
         <ul>
-        @foreach (var attendie in Model.Meeting.Attendies)
-        {
-            <li>@attendie.FullName</li>
-        }
+            @foreach (var attendie in Model.Meeting.Attendies)
+            {
+                <li>@attendie.FullName</li>
+            }
         </ul>
     </div>
 </div>

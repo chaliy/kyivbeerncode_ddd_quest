@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using System.Web.Routing;
 using KyivBeerNCode;
 using KyivBeerNCode.Domain.Meetings;
 using UI.Models.Meetings;
@@ -42,6 +43,40 @@ namespace UI.Controllers
             {
                 Meeting = meeting
             });
+        }
+
+        //
+        // GET: /Meetings/Details/5/Register
+
+        public ActionResult Register(string id)
+        {
+            var env = ExecutionEnvironment.Default();
+            var meetings = env.Resolve<MeetingRepository>();
+            var meeting = meetings.GetByID(id);
+
+            return View(new MeetingDetailsModel
+            {
+                Meeting = meeting
+            });
+        } 
+
+        //
+        // POST: /Meetings/Details/5/Register
+
+        [HttpPost]
+        public ActionResult Create(string id, FormCollection collection)
+        {
+            try
+            {
+                
+
+
+                return RedirectToAction("Details", new { id });
+            }
+            catch
+            {
+                return View();
+            }
         }
 
         //
