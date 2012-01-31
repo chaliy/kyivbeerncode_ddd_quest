@@ -45,14 +45,14 @@
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Domain\Events\Address.cs" />
-    <Compile Include="Domain\Events\Attendie.cs" />
-    <Compile Include="Domain\Events\CreateNewEvent.cs" />
-    <Compile Include="Domain\Events\CreateNewEventHandler.cs" />
+    <Compile Include="Domain\Meetings\Address.cs" />
+    <Compile Include="Domain\Meetings\Attendie.cs" />
+    <Compile Include="Domain\Meetings\CreateNewMeeting.cs" />
+    <Compile Include="Domain\Meetings\CreateNewMeetingHandler.cs" />
     <Compile Include="DomainException.cs" />
-    <Compile Include="Domain\Events\Event.cs" />
-    <Compile Include="Domain\Events\EventRegistrator.cs" />
-    <Compile Include="Domain\Events\EventRepository.cs" />
+    <Compile Include="Domain\Meetings\Meeting.cs" />
+    <Compile Include="Domain\Meetings\MeetingRegistrator.cs" />
+    <Compile Include="Domain\Meetings\MeetingRepository.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="ExecutionEnvironment.cs" />
     <Compile Include="Infrastructure\Persistence\IUnitOfWork.cs" />

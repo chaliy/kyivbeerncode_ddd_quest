@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.Composition.Hosting;
 using System.Linq;
-using KyivBeerNCode.Domain.Events;
+using KyivBeerNCode.Domain.Meetings;
 using KyivBeerNCode.Infrastructure.Persistence.NHibernate;
 
 namespace KyivBeerNCode
@@ -16,7 +16,7 @@ namespace KyivBeerNCode
                 // Infrastructure
                 uowType,
                 // Domain
-                typeof(EventRegistrator), typeof(EventRepository));
+                typeof(MeetingRegistrator), typeof(MeetingRepository));
 
             _container = new CompositionContainer(catalog);            
         }        

@@ -1,4 +1,4 @@
-namespace KyivBeerNCode.Domain.Events
+namespace KyivBeerNCode.Domain.Meetings
 {
     public class Attendie : Entity
     {
