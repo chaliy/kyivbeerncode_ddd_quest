@@ -6,7 +6,7 @@ namespace KyivBeerNCode.Tests
     {        
         public static ExecutionEnvironment Create()
         {
-            return new ExecutionEnvironment(typeof (MemoryUnitOfWork));
+            return new ExecutionEnvironment(typeof(DisposableMemoryUnitOfWork));
         }
     }    
 }

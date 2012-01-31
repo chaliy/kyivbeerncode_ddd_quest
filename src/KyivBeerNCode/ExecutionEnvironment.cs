@@ -2,7 +2,7 @@
 using System.ComponentModel.Composition.Hosting;
 using System.Linq;
 using KyivBeerNCode.Domain.Meetings;
-using KyivBeerNCode.Infrastructure.Persistence.NHibernate;
+using KyivBeerNCode.Infrastructure.Persistence.Memory;
 
 namespace KyivBeerNCode
 {
@@ -34,7 +34,7 @@ namespace KyivBeerNCode
 
         public static ExecutionEnvironment Default()
         {
-            return new ExecutionEnvironment(typeof(NHUnitOfWork));
+            return new ExecutionEnvironment(typeof(SharedMemoryUnitOfWork));
         }
     }
 }

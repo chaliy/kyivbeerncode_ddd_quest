@@ -1,0 +1,22 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "All Meetings";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>All Meetings</h2>
+
+<div class="container-fluid">
+    <div class="sidebar">
+        <p>Eventually here you will see actions like register meeting.</p>
+    </div>
+    <div class="content">
+        <ul>
+        @foreach (var meeting in Model.Meetings)
+        {
+            <li> <a href="/meetings/details/@meeting.ID">@meeting.Title</a></li>
+        }
+        </ul>
+    </div>
+</div>

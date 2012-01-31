@@ -1,13 +1,16 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.Composition;
 using System.Linq;
 
 namespace KyivBeerNCode.Infrastructure.Persistence.Memory
 {
-    [Export(typeof(IUnitOfWork))]
-    public class MemoryUnitOfWork : IUnitOfWork
+    public abstract class AbstractMemoryUnitOfWork : IUnitOfWork
     {
-        readonly IList<RootAggregate> _store = new List<RootAggregate>();
+        readonly IList<RootAggregate> _store;
+
+        protected AbstractMemoryUnitOfWork(IList<RootAggregate> store)
+        {
+            _store = store;
+        }
 
         public T Get<T>(string id) where T : RootAggregate
         {

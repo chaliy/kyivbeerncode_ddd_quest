@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
 using KyivBeerNCode.Infrastructure.Persistence;
@@ -20,9 +21,19 @@ namespace KyivBeerNCode.Domain.Meetings
             return _uow.Query<Meeting>().Any(x => x.Title == title);
         }
 
-        internal void Add(Meeting meeting)
+        public void Add(Meeting meeting)
         {
             _uow.Add(meeting);
+        }
+
+        public IList<Meeting> GetAll()
+        {
+            return _uow.Query<Meeting>().ToList();
+        }
+
+        public Meeting GetByID(string id)
+        {
+            return _uow.Get<Meeting>(id);
         }
     }
 }

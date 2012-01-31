@@ -56,10 +56,13 @@
     <Compile Include="Entity.cs" />
     <Compile Include="ExecutionEnvironment.cs" />
     <Compile Include="Infrastructure\Persistence\IUnitOfWork.cs" />
-    <Compile Include="Infrastructure\Persistence\Memory\MemoryUnitOfWork.cs" />
+    <Compile Include="Infrastructure\Persistence\Memory\SharedMemoryUnitOfWork.cs" />
+    <Compile Include="Infrastructure\Persistence\Memory\DisposableMemoryUnitOfWork.cs" />
+    <Compile Include="Infrastructure\Persistence\Memory\AbstractMemoryUnitOfWork.cs" />
     <Compile Include="Infrastructure\Persistence\NHibernate\NHUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RootAggregate.cs" />
+    <Compile Include="Utils\Urls.cs" />
     <Compile Include="ValueObject.cs" />
   </ItemGroup>
   <ItemGroup>

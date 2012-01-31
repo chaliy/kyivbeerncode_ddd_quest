@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using KyivBeerNCode.Utils;
 
 namespace KyivBeerNCode.Domain.Meetings
 {
@@ -17,6 +18,7 @@ namespace KyivBeerNCode.Domain.Meetings
         public Meeting (string title)
 	    {
             Title = title;
+            SetID(GenerateId(title));
 	    }
 
         public Attendie RegisterAttendie(string name)
@@ -29,6 +31,11 @@ namespace KyivBeerNCode.Domain.Meetings
         public bool IsAttendieRegistered(string attendie)
         {
             return _attendies.Any(x => x.FullName == attendie);
+        }
+
+        public static string GenerateId(string title)
+        {
+            return Urls.MakeToken(title);
         }
     }
 }
