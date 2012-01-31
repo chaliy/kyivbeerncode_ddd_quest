@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
@@ -45,16 +46,10 @@
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Domain\Meetings\Address.cs" />
-    <Compile Include="Domain\Meetings\Attendie.cs" />
-    <Compile Include="Domain\Meetings\CreateNewMeeting.cs" />
-    <Compile Include="Domain\Meetings\CreateNewMeetingHandler.cs" />
     <Compile Include="DomainException.cs" />
-    <Compile Include="Domain\Meetings\Meeting.cs" />
-    <Compile Include="Domain\Meetings\MeetingRegistrator.cs" />
-    <Compile Include="Domain\Meetings\MeetingRepository.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="ExecutionEnvironment.cs" />
+    <Compile Include="Infrastructure\Persistence\FileSystem\FSUnitOfWork.cs" />
     <Compile Include="Infrastructure\Persistence\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\Persistence\Memory\SharedMemoryUnitOfWork.cs" />
     <Compile Include="Infrastructure\Persistence\Memory\DisposableMemoryUnitOfWork.cs" />
@@ -71,6 +66,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Domain\" />
     <Folder Include="Infrastructure\CommandHandling\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

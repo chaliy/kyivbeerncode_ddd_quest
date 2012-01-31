@@ -1,5 +1,5 @@
-﻿using KyivBeerNCode;
-using KyivBeerNCode.Domain.Meetings;
+﻿//using KyivBeerNCode;
+//using KyivBeerNCode.Domain.Meetings;
 
 namespace PlayGround
 {    
@@ -7,10 +7,15 @@ namespace PlayGround
     {
         static void Main(string[] args)
         {
-            var env = ExecutionEnvironment.Default();
-            var registrator = env.Resolve<MeetingRegistrator>();
+            //var env = ExecutionEnvironment.Default();
+            //var registrator = env.Resolve<MeetingRegistrator>();
 
-            var meeting = registrator.Register("Test");
+            //var meeting = registrator.Register("Test");
         }
+    }
+
+    public class BatchMeetingRegistrator
+    {
+
     }
 }
