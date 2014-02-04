@@ -1,6 +1,6 @@
 ﻿using KyivBeerNCode.Infrastructure.Persistence.Memory;
 
-namespace KyivBeerNCode.Tests
+namespace KyivBeerNCode
 {
     public class TestEnvironment
     {        
