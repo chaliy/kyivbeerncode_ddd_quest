@@ -7,13 +7,13 @@ namespace KyivBeerNCode.Tests.Domain.Meetings
 {
     public class When_register_alread_registerd_attendie
     {
-        private Meeting _meeting;
+        private KyivBeerNCode.Domain.Meetings.Meeting _meeting;
         private Action _register;
 
         [TestFixtureSetUp]
         public void Given_meeting_and_attendie()
         {
-            _meeting = new Meeting("DDD Quest Meeting");
+            _meeting = new KyivBeerNCode.Domain.Meetings.Meeting("DDD Quest Meeting");
             _meeting.RegisterAttendie("Ivan Korneliuk");
 
             // Act

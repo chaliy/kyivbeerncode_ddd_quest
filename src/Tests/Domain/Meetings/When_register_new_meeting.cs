@@ -10,7 +10,7 @@ namespace KyivBeerNCode.Tests.Domain.Meetings
     // Just because they are easy :)
     public class When_register_new_meeting
     {
-        private Meeting _justCreatedMeeting;
+        private KyivBeerNCode.Domain.Meetings.Meeting _justCreatedMeeting;
 
         [TestFixtureSetUp]
         public void Given_newelly_create_meeting()
